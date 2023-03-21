@@ -1,2 +1,1 @@
-# alx-low_level_programming
-This is my first C - Hello, World repository as a full-stack engineer
+This is my first C - Hello, World directory as a full-stack engineer
