@@ -1,6 +1,7 @@
 #include "function_pointers.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <udis86.h>
 
 /**
  * main - Create Opcode
