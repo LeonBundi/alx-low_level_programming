@@ -9,21 +9,28 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t num = 0;
-	int diff;
+	const listint_t *visited_nodes = NULL;
 
 	while (head)
 	{
-		diff = head - head->next;
+		const listint_t *temp = visited_nodes;
+
+		while (temp)
+		{
+			if (head == temp)
+			{
+				printf("-> [%p] %d\n", (void *)head, head->n);
+				return (num);
+			}
+			temp = temp->next;
+		}
+
 		num++;
 		printf("[%p] %d\n", (void *)head, head->n);
-		if (diff > 0)
-			head = head->next;
-		else
-		{
-			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
-			break;
-		}
+		visited_nodes = head;
+		head = head->next;
 	}
+
 	return (num);
 }
 
