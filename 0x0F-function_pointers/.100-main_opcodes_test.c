@@ -1,6 +1,11 @@
 #include "function_pointers.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <udis86.h>
+/**
+ * To compile the program (using gcc):
+ * $ gcc -ludis86 simple_example.c -o simple_example
+ */
 
 /**
  * main - Create Opcode
